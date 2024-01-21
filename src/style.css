@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Raleway:wght@700&display=swap');
+
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 16px; /* Adjusted to match the email and password inputs */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    margin: 5px 0px;
+}
+
+.custom-input-group .form-control {
+    flex: 1 0 auto;
+}
+
+.custom-input-group .input-group-append {
+    flex-shrink: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* This will ensure that it takes up at least the full viewport height */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    cursor: none;
+}
+
+/* Style for the form pane */
+.form-pane {
+    background-color: #FFFFFF;
+    /* White background for the pane */
+    padding: 30px;
+    /* Padding inside the pane */
+    border-radius: 15px;
+    /* Rounded corners for the pane */
+    margin-bottom: 20px;
+    /* Margin-bottom to separate form and image */
+}
+
+.btn-get-started:hover {
+    background-color: transparent;
+    border-color: #4299e1;
+    /* Tailwind's blue-500 color */
+    color: #4299e1;
+    /* Tailwind's blue-500 color */
+}
+
+.nav-link:hover {
+    color: #4299e1 !important;
+    /* Tailwind's blue-500 color */
+}
+
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    /* Ensures your content sits on top of the background design */
+}
+
+
+.input-group-text {
+    border-radius: 0 4px 4px 0;
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-white {
+    border-radius: 8px;
+    /* Adjust the border-radius as needed */
+}
+
+a {
+    text-decoration: none;
+}
+
+a.purple-link,
+a.purple-link.text-sm {
+    margin-bottom: 16px;
+    /* Add space below the links */
+    display: block;
+}
+
+
+
+.text-primary,
+.purple-link {
+    color: #007bff;
+    /* Use the purple for primary text links */
+    font-weight: bold;
+}
+
+.text-primary:hover,
+.purple-link:hover {
+    color: #003566;
+    /* Lighter purple for hover state */
+    text-decoration: none;
+}
+
+
+.half-hr {
+    display: inline;
+}
+
+#log-in {
+    background-color: #8A2BE2;
+    border: none;
+    color: azure;
+    padding: 11px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Divider hr css code */
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.divider-line {
+    flex-grow: 1;
+    /* Allows the lines to grow and occupy the remaining space */
+    flex-shrink: 1;
+    /* Allows the lines to shrink if there isn't enough space */
+    flex-basis: 20%;
+    /* Initial length of the lines */
+    height: 1px;
+    /* Sets the height of the hr */
+    background-color: #808080;
+    /* Sets the line color */
+    border: none;
+    /* Removes the border */
+}
+
+.divider-text {
+    padding: 0px;
+    color: #808080;
+    font-weight: 500;
+}
+
+/* Contact using with buttons */
+.google-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.google-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.logo-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
+/* Cursor */
+.cursor-small,
+.cursor-big {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-small {
+    width: 8px;
+    height: 8px;
+    background-color: #5D3F6A;
+    /* Dark purple for the small cursor */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    /* Prevents the cursor from interfering with clickable elements */
+}
+
+.cursor-big {
+    width: 50px;
+    height: 50px;
+    background-color: #7D7D7D;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    transition: transform 0.2s ease-out;
+    /* This creates the lag effect */
+
+}
+
+/* Filter Card */
+.questionnaire {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.question-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.prev,
+.next {
+    margin-top: 10px;
+}
+
+.progress-tracker {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #666;
+}
+
+
+
+/* Landing Page */
+/* Add this to your main.css or equivalent stylesheet */
+:root {
+    --slug-yellow: #ffd600;
+    /* Adjust the shade of yellow as needed */
+    --slug-blue: rgb(37, 150, 190);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    /* or any other font */
+}
+
+nav {
+    /* Navigation bar styling */
+}
+
+.hero-section {
+    background-color: var(--slug-yellow);
+    padding: 50px 20px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; /* Add position relative (or absolute/fixed/sticky as needed) */
+    z-index: 2; /* Set z-index to desired value */
+}
+
+
+
+
+.btn-primary {
+    background-color: var(--slug-blue);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--slug-blue), 10%);
+}
+
+/* NavBar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 1000;
+    /* Ensure the navbar is above other content */
+}
+
+.navbar.transparent {
+    background-color: rgba(255, 255, 0, 0.5);
+    /* Yellow with some transparency */
+}
+
+.navbar.opaque {
+    background-color: #ffffff;
+    /* White for when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: add shadow for depth */
+}
+
+
+
+/* Initial styles for the Login button */
+.nav-item .login-btn {
+    border-color: #1d63ff;
+    color: #1d63ff !important;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Hover styles for the Login button */
+.nav-item .login-btn:hover {
+    background-color: #1d63ff;
+    color: white !important;
+}
+
+/* Initial styles for the Get Started button */
+.nav-item .signup-btn {
+    border-color: #1d63ff;
+    background-color: #1d63ff;
+    color: white !important;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Hover styles for the Get Started button */
+.nav-item .signup-btn:hover {
+    background-color: transparent;
+    border-color: #1d63ff;
+    color: #1d63ff !important;
+}
+
+
+
+/* Slug Button */
+/* style.css */
+
+.slug-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFEA00;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 30px;
+    width: 375px;
+    /* Fixed width */
+    height: 75px;
+    /* Fixed height */
+}
+
+/* Ensure button is responsive and doesn't overflow small screens */
+@media (max-width: 400px) {
+    .slug-button {
+        width: 95%;
+        /* Take up most of the screen width */
+        height: auto;
+        /* Adjust height automatically */
+        padding: 10px;
+        /* Reduce padding */
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+.slug-button:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slug-icon {
+    height: 60%;
+    /* Set height in relation to button */
+    width: auto;
+    /* Auto width based on height to maintain aspect ratio */
+    fill: #FFEA00;
+    transition: fill 0.3s ease;
+}
+
+.slug-icon:hover {
+    fill: #D4C000;
+}
+
+
+/* Custom CSS */
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-underline::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #3B82F6;
+    /* Tailwind blue-500 */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hover-underline:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* style.css */
+
+/* Existing styles for larger devices */
+
+
+  
+
+
+
+/* Hamburger Menu Button Styles */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Add a rotation animation to the button when changing state */
+.navbar-toggler.active {
+    transform: rotate(180deg);
+}
+
+.navbar-toggler .line {
+    fill: black;
+    /* Initial color of the lines */
+    transition: fill 0.3s, transform 0.3s;
+}
+
+.navbar-toggler.active .line {
+    fill: white;
+    /* Color of lines when active */
+}
+
+.navbar-toggler .line.top {
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.navbar-toggler .line.bottom {
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.navbar-toggler.active .line.top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler.active .line.bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.mnlinks {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12vw;
+    letter-spacing: 0.05em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.button {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    height: 10vw;
+    /* Fixed height */
+    width: 35vw;
+    font-size: 4vw;
+    /* Other styles */
+}
+
+/* Set a minimum padding and width for smaller viewports */
+@media (max-width: 300px) {
+    .button {
+        padding: 12px;
+        /* Minimum padding */
+        width: 80px;
+        /* Minimum width */
+    }
+}
+
+
+/* Set a maximum padding and width for larger viewports */
+@media (min-width: 1200px) {
+    .button {
+        padding: 24px;
+        /* Maximum padding */
+        width: 250px;
+        /* Maximum width */
+    }
+}
+
+.parallax-bubble {
+    position: absolute;
+    font-size: 2em;
+    color: yellow;
+}
+
+
+
+.slugHead {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #1d63ff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.heading{
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: #1d63ff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.3vw;
+}
+
+.contain {
+    /* Your existing styles for container */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: visible; 
+    justify-content: flex-start; /* Aligns flex items to the start (left) */
+     text-align: left; 
+}
+
+.customize-your-meal {
+    display: flex; /* Keeps words in a single line */
+    justify-content: flex-start; /* Aligns flex items to the start (left) */
+    text-align: left; /* Aligns text to the left */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    margin: 0; /* Adjust as needed */
+}
+
+.customize-your-meal span {
+    white-space: nowrap; /* Prevents breaking within a word */
+    margin-right: 5px; /* Adds spacing after words */
+}
+/* Tagline */
+.trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 80px; /* Adjust height if needed */
+    line-height: 80px; /* Adjust line height if needed */
+    color: black;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    will-change: transform, opacity;
+    overflow: visible;
+    margin-bottom: 0;
+    max-width: 1200px; /* Set a max-width for large screens */
+    padding-left: 10vw; /* Add some padding if necessary */
+    padding-right: 20px;
+}
+
+.trailsText > div {
+    padding-right: 0.05em;
+    overflow: visible;
+}
+
+.tag-para{
+    color: #121722;
+}
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+    .customize-your-meal {
+        flex-wrap: wrap; /* Allows text to wrap to the next line */
+    }
+    .customize-your-meal span {
+        display: block; /* Stacks words vertically */
+        margin: 0px; /* Centers each word and adds vertical spacing */
+    }
+}
+
+/* Adjust font size for different screen sizes */
+@media (max-width: 768px) {
+    .trailsText {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .trailsText {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .customize-your-meal {
+        /* ... other properties ... */
+        margin: 0px; /* Add vertical margin if needed */
+    }
+    .customize-your-meal span {
+        /* ... other properties ... */
+        margin: 0px; /* Add more vertical margin for wrapped items */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 30px 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+
+/* Pre-footer section */
+.bigpadding {
+    padding: 250px; /* You can adjust this padding if it's too large for your design */
+  }
+  
+  .wt-btn_sign {
+    font-size: 1.625rem; /* Use rem for font sizes */
+    padding: 0 2em; /* Use em for padding */
+    height: 3.75rem; 
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      letter-spacing: -.21px;
+      white-space: nowrap;
+      transition: color .3s;
+      line-height: 20px;  
+      color: #ffffff; /* Text color set to white */
+      background: #1d63ff; /* Background color set to #1d63ff */
+      border: none;
+      border-radius: 30px; /* Adjust border-radius for consistency with button size */
+      cursor: pointer; /* Changes cursor to pointer on hover for better UX */
+      
+  }
+  
+  .wt-btn_sign:hover {
+      color: #1d63ff; /* Text color changes to background color on hover */
+      background: #ffffff; /* Background becomes white on hover */
+      cursor: pointer;
+  }
+  
+  .wt-btn_sign-bound {
+      display: block;
+      overflow: hidden;
+  }
+  
+  .wt-btn_sign-bound span {
+      position: relative;
+      display: inline-block;
+      padding: 0 22px; /* You can adjust this if needed */
+      animation: wt-btn_sign-marquee 2s linear infinite;
+  }
+  
+  .wt-btn_sign-bound span:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 100%;
+      padding: 0 23px; /* You can adjust this if needed */
+  }
+  
+  @keyframes wt-btn_sign-marquee {
+      0% {
+          transform: translate3d(0,0,0);
+      }
+      100% {
+          transform: translate3d(-100%,0,0);
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .wt-btn_sign {
+        font-size: 18px; /* Smaller font size on small screens */
+        padding: 0 20px; /* Smaller padding */
+        height: 50px; /* Smaller height */
+        border-radius: 25px; /* Adjusted border-radius */
+    }
+}
+
+/* Marquee */
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+    display: inline-block;
+    will-change: transform;
+  }
+  
+  .js-text {
+    display: inline-block;
+    padding: 0 2rem; /* Adjust spacing between repetitions */
+    color: white;
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold;
+    /* Add any additional styling for the marquee text */
+  }
+  
+  .wt-btn_sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add any additional styling for the button */
+  }
+  
+
+  /* Parallax Section */
+
+  .para-container {
+    position: relative;
+    background-color: white;
+    min-height: 100vh;
+    z-index: 999;
+}
+  
+  .card {
+    width: 230px;
+    height: 339.156px;
+    background-color: #FFD700;
+    border-radius: 10px;
+  }
+  
+  /* Default positions for larger screens */
+  .left-card {
+    top: 100px;
+    left: 50px;
+  }
+  
+  .right-card {
+    top: 100px;
+    right: 50px;
+  }
+  
+  /* Positions for small screens */
+  @media (max-width: 768px) {
+    .left-card {
+      right: 50px; /* Align to the right for small screens */
+      left: auto; /* Reset left alignment */
+    }
+  
+    .right-card {
+      left: 50px; /* Align to the left for small screens */
+      right: auto; /* Reset right alignment */
+    }
+  }
+  
+  /* Additional styles for sticky elements if needed */
+  .sticky-style {
+    position: sticky;
+    top: 20px;
+    background: white;
+    padding: 10px;
+    font-size: 2em;
+    z-index: 10;
+    text-align: center;
+  }
+  
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #007bff; /* Change this to the color you want */
+    border-color: #007bff; /* Change this to the border color you want */
+  }
+
+  .form-head{
+    color: rgb(69, 74, 84);
+    letter-spacing: 0.02vw;
+  }
+
+  .nav-link.active:before {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust this value as needed */
+    left: 0;
+    right: 0;
+    height: 4px; /* Height of the blue line */
+    background-color: #007bff; /* Blue color for the active line */
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+  }
+  
+
+  .faq-details, footer {
+    z-index: 9999; /* Arbitrary high value for testing purposes */
+    position: relative; /* z-index only works on positioned elements */
+  }
+  

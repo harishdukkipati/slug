@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack children elements vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    background-color: #FFD700; /* Vibrant yellow background color */
+  }
+  
+  .dashboard {
+    width: 100%;
+    max-width: 1200px; /* Maximum width of the dashboard */
+    margin: auto; /* Center the dashboard in the page */
+  }
+  
+  .dashboard-title {
+    font-size: 2em; /* Larger font size for dashboard title */
+    font-weight: bold; /* Bold font for dashboard title */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center title text */
+  }
+  
+  .meal-container {
+    display: flex;
+    justify-content: center; /* Center meal-boxes horizontally */
+    align-items: center; /* Align meal-boxes vertically */
+    flex-wrap: wrap; /* Wrap meal-boxes if needed */
+    gap: 20px; /* Space between meal-boxes */
+  }
+  
+  .meal-box {
+    width: 300px; /* Width of each meal-box */
+    min-height: 250px; /* Minimum height for consistency */
+    border: 2px solid #e0e0e0; /* Lighter border color */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex-direction: column; /* Stack children elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    padding: 20px; /* Padding inside the meal-box */
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+  }
+  
